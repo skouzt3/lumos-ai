@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
+import animeFieldVideo from "@/assets/anime-field.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
@@ -21,11 +22,8 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-// Anime-style nature loop (royalty-free CDN). Swap freely for a custom asset later.
-const VIDEO_SRC =
-  "https://cdn.coverr.co/videos/coverr-grass-field-with-flowers-in-the-wind-2633/1080p.mp4";
-const VIDEO_POSTER =
-  "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=70";
+// AI-generated anime-style green field with wind and animals
+const VIDEO_SRC = animeFieldVideo.url;
 
 function LandingPage() {
   const [name, setName] = useState("");
@@ -58,8 +56,8 @@ function LandingPage() {
         muted
         playsInline
         preload="auto"
-        poster={VIDEO_POSTER}
       >
+
         <source src={VIDEO_SRC} type="video/mp4" />
       </video>
 
