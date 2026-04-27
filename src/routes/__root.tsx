@@ -1,20 +1,19 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-screen items-center justify-center bg-black px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <h1 className="text-7xl font-bold text-white">404</h1>
+        <h2 className="mt-4 text-xl font-semibold text-white">Page not found</h2>
+        <p className="mt-2 text-sm text-white/50">
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-black transition-opacity hover:opacity-80"
           >
             Go home
           </Link>
@@ -29,18 +28,22 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lumos AI Studio is a web application for AI-powered image and video creation." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lumos AI Studio is a web application for AI-powered image and video creation." },
+      { title: "Pensieve — Create anything with AI. Own it forever." },
+      {
+        name: "description",
+        content:
+          "The AI creation studio that lives on your phone. Bring your own API keys, pick a template, and generate studio-quality images and videos — no subscriptions, no monthly fees, ever.",
+      },
+      { name: "author", content: "Pensieve" },
+      { property: "og:title", content: "Pensieve — Create anything with AI. Own it forever." },
+      {
+        property: "og:description",
+        content:
+          "The AI creation studio that lives on your phone. Bring your own API keys, pick a template, and generate studio-quality images and videos — no subscriptions, no monthly fees, ever.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Lumos AI Studio is a web application for AI-powered image and video creation." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/24ea1883-1a8c-403b-abd8-bb842ae14b8b/id-preview-a961e5eb--1d768121-b4f8-41b2-9b24-037d4b0cd899.lovable.app-1777290833207.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/24ea1883-1a8c-403b-abd8-bb842ae14b8b/id-preview-a961e5eb--1d768121-b4f8-41b2-9b24-037d4b0cd899.lovable.app-1777290833207.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@pensieveai" },
     ],
     links: [
       {
