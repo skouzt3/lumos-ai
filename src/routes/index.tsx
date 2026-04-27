@@ -22,11 +22,8 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-// Anime-style nature loop (royalty-free CDN). Swap freely for a custom asset later.
-const VIDEO_SRC =
-  "https://cdn.coverr.co/videos/coverr-grass-field-with-flowers-in-the-wind-2633/1080p.mp4";
-const VIDEO_POSTER =
-  "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=70";
+// AI-generated anime-style green field with wind and animals
+const VIDEO_SRC = animeFieldVideo.url;
 
 function LandingPage() {
   const [name, setName] = useState("");
