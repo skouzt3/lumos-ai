@@ -130,8 +130,8 @@ function LandingPage() {
                   <path d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h2 className="text-2xl font-semibold sm:text-3xl">You're on the list</h2>
-              <p className="mt-3 text-sm text-white/75 sm:text-base">
+              <h2 className="font-display text-2xl tracking-tight sm:text-3xl">You're on the list</h2>
+              <p className="mt-3 text-xs font-light text-white/75 sm:text-base">
                 Thanks, {name.split(" ")[0]}. We'll reach out at{" "}
                 <span className="text-white">{email}</span> as soon as early access opens.
               </p>
