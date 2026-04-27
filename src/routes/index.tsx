@@ -56,8 +56,8 @@ function LandingPage() {
         muted
         playsInline
         preload="auto"
-        poster={VIDEO_POSTER}
       >
+
         <source src={VIDEO_SRC} type="video/mp4" />
       </video>
 
