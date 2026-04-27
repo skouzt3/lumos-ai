@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
+import animeFieldVideo from "@/assets/anime-field.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
