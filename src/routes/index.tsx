@@ -66,19 +66,19 @@ function LandingPage() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
 
       {/* Content */}
-      <section className="relative z-10 flex min-h-screen items-center justify-center px-4 py-10 sm:px-6">
-        <div className="glass-card w-full max-w-md rounded-3xl p-6 text-white sm:max-w-lg sm:p-10">
+      <section className="relative z-10 flex min-h-screen items-end justify-center px-4 pb-8 pt-6 sm:items-center sm:px-6 sm:py-10">
+        <div className="glass-card mx-auto w-full max-w-[22rem] rounded-2xl p-5 text-white sm:max-w-lg sm:rounded-3xl sm:p-10">
           {!submitted ? (
             <>
-              <h1 className="text-center text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h1 className="font-display text-center text-3xl tracking-tight sm:text-5xl">
                 Lumos AI
               </h1>
-              <p className="mx-auto mt-4 max-w-md text-center text-sm leading-relaxed text-white/80 sm:text-base">
+              <p className="mx-auto mt-2 max-w-md text-center text-[13px] font-light leading-relaxed text-white/80 sm:mt-4 sm:text-base">
                 Your personal AI creation studio. Bring your own API keys. Generate images and
                 videos with ready-made templates. One-time purchase, no subscriptions.
               </p>
 
-              <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-3">
+              <form onSubmit={handleSubmit} className="mt-5 flex flex-col gap-2.5 sm:mt-8 sm:gap-3">
                 <input
                   type="text"
                   required
@@ -86,7 +86,7 @@ function LandingPage() {
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your name"
                   autoComplete="name"
-                  className="glass-input w-full rounded-xl px-4 py-3 text-base text-white"
+                  className="glass-input w-full rounded-lg px-3.5 py-2.5 text-sm text-white sm:rounded-xl sm:px-4 sm:py-3 sm:text-base"
                 />
                 <input
                   type="email"
@@ -95,23 +95,23 @@ function LandingPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
                   autoComplete="email"
-                  className="glass-input w-full rounded-xl px-4 py-3 text-base text-white"
+                  className="glass-input w-full rounded-lg px-3.5 py-2.5 text-sm text-white sm:rounded-xl sm:px-4 sm:py-3 sm:text-base"
                 />
 
                 {error && (
-                  <p className="text-center text-sm text-red-200/90">{error}</p>
+                  <p className="text-center text-xs text-red-200/90 sm:text-sm">{error}</p>
                 )}
 
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="glow-button mt-2 w-full rounded-xl px-6 py-3 text-base font-semibold tracking-wide"
+                  className="glow-button mt-1 w-full rounded-lg px-5 py-2.5 text-sm font-medium tracking-wide sm:mt-2 sm:rounded-xl sm:px-6 sm:py-3 sm:text-base"
                 >
                   {submitting ? "Sending…" : "Get Early Access"}
                 </button>
               </form>
 
-              <p className="mt-5 text-center text-xs text-white/50">
+              <p className="mt-3 text-center text-[11px] font-light text-white/50 sm:mt-5 sm:text-xs">
                 No spam. We'll only email you when Lumos is ready.
               </p>
             </>
@@ -130,8 +130,8 @@ function LandingPage() {
                   <path d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h2 className="text-2xl font-semibold sm:text-3xl">You're on the list</h2>
-              <p className="mt-3 text-sm text-white/75 sm:text-base">
+              <h2 className="font-display text-2xl tracking-tight sm:text-3xl">You're on the list</h2>
+              <p className="mt-3 text-xs font-light text-white/75 sm:text-base">
                 Thanks, {name.split(" ")[0]}. We'll reach out at{" "}
                 <span className="text-white">{email}</span> as soon as early access opens.
               </p>
